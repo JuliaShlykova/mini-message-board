@@ -4,7 +4,7 @@ block content
   h1= title
   for msg in messages 
     div.msg-box
-      p #[strong #{msg.user}] #{msg.added}
+      p #[strong #{msg.username}] #{msg.date_added_formatted}
       p=msg.text
   form(action='/new')
     button(type='submit') Create a new message

@@ -1,9 +1,9 @@
 extends layout
 block content
   h1 Create new message
-  form(method="POST" action="/new")
+  form(method="POST" action="/new" autocomplete="off")
     label(for="user") User: 
-    input#user(type="text" name="user" value=(msg?msg.user:''))
+    input#username(type="text" name="username" value=(msg?msg.username:''))
     label(for="message") Message: 
     input#message(type="text" name="message" value=(msg?msg.text:''))
     button(type="submit") Send
